@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace</title>
+</head>
+
+<body>
+    <h1 id="gros_titre">Découverte DOM HTML</h1>
+    <p class="para">un texte est <a
+    href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Number"> un lien </a>
+    </p>
+    <p class="para"> un deuxième paragraphe</p>
+
+    <script>
+        var titre = document.getElementById("gros_titre");
+        var parent = document.body;
+        
+        // creer un nouveau element h2
+        // on donne un id pour le nouveau titre
+        // ajouter un nouveau element 
+        //remplacer titre h1 par h2
+        var nouveautitre = document.createElement("h3");
+        nouveautitre.id = "titre_moyen";
+        nouveautitre.innerHTML = "Texte modifié en js";
+        parent.replaceChild(nouveautitre, titre)
+
+    </script>
+</body>
+
+</html>
